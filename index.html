@@ -10,7 +10,6 @@
     --pink-bg: #FDF0F0;
     --pink-light: #FAE4E4;
     --pink-mid: #F2CBCB;
-    --pink-deep: #C97B7B;
     --pink-dark: #8B4A4A;
     --rose: #D4706E;
     --white: #FFFFFF;
@@ -34,20 +33,15 @@
   .hero {
     min-height: 100vh;
     background: linear-gradient(160deg, #FDEAEA 0%, #F9D8D8 30%, #F2CBCB 60%, #EAB8B8 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 32px;
-    position: relative;
-    overflow: hidden;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 80px 32px;
+    position: relative; overflow: hidden;
   }
 
   .hero::before {
     content: '';
-    position: absolute;
-    top: -120px; right: -120px;
+    position: absolute; top: -120px; right: -120px;
     width: 500px; height: 500px;
     background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
     border-radius: 50%;
@@ -55,8 +49,7 @@
 
   .hero::after {
     content: '';
-    position: absolute;
-    bottom: -80px; left: -80px;
+    position: absolute; bottom: -80px; left: -80px;
     width: 350px; height: 350px;
     background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
     border-radius: 50%;
@@ -89,8 +82,7 @@
 
   .hero-subtitle {
     font-size: clamp(16px, 3vw, 20px);
-    color: var(--text-mid); font-weight: 300;
-    margin-bottom: 32px;
+    color: var(--text-mid); font-weight: 300; margin-bottom: 32px;
     animation: fadeUp 0.8s ease 0.4s both;
   }
 
@@ -121,7 +113,7 @@
   .s-title { font-size: 15px; font-weight: 700; color: var(--pink-dark); margin-bottom: 4px; }
   .s-time { font-size: 13px; color: var(--text-light); }
 
-  .btn-hero {
+  .btn-main {
     display: inline-block;
     background: var(--pink-dark); color: #fff;
     padding: 18px 52px; border-radius: 100px;
@@ -132,7 +124,7 @@
     animation: fadeUp 0.8s ease 0.7s both;
   }
 
-  .btn-hero:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(139,74,74,0.4); }
+  .btn-main:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(139,74,74,0.4); }
 
   .seats-note {
     margin-top: 14px; font-size: 13px; color: var(--text-light);
@@ -140,7 +132,7 @@
   }
   .seats-note strong { color: var(--rose); }
 
-  /* DIVIDER */
+  /* ELEGANT DIVIDER */
   .elegant-divider {
     display: flex; align-items: center;
     gap: 16px; margin: 0 auto 40px; max-width: 320px;
@@ -153,14 +145,115 @@
     letter-spacing: 0.12em; white-space: nowrap;
   }
 
-  /* SECTION */
-  .section { padding: 80px 24px; max-width: 680px; margin: 0 auto; }
+  /* COMMON */
+  .inner { max-width: 680px; margin: 0 auto; padding: 80px 24px; }
 
   .section-title {
     font-family: 'Noto Serif KR', serif;
     font-size: clamp(24px, 5vw, 36px);
     font-weight: 700; color: var(--pink-dark);
     text-align: center; line-height: 1.4; margin-bottom: 48px;
+  }
+
+  /* FOMO SECTION */
+  .fomo-bg {
+    background: linear-gradient(160deg, #FDF0F0 0%, #F9E0E0 100%);
+    padding: 80px 24px;
+  }
+
+  .fomo-inner { max-width: 680px; margin: 0 auto; }
+
+  .fomo-box {
+    background: var(--white);
+    border: 1px solid var(--pink-mid);
+    border-radius: 24px; padding: 40px 36px;
+    margin-bottom: 24px;
+  }
+
+  .fomo-box .big-text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 700; color: var(--pink-dark);
+    line-height: 1.5; margin-bottom: 20px;
+    word-break: keep-all;
+  }
+
+  .fomo-box .big-text em {
+    color: var(--rose); font-style: normal;
+  }
+
+  .fomo-box p {
+    font-size: 15px; color: var(--text-mid);
+    line-height: 1.9; word-break: keep-all;
+  }
+
+  .fomo-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px; margin-top: 32px;
+  }
+
+  .fomo-stat {
+    background: var(--pink-light);
+    border-radius: 16px; padding: 20px 16px;
+    text-align: center;
+  }
+
+  .fomo-stat .num {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--pink-dark); line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .fomo-stat .label {
+    font-size: 12px; color: var(--text-light);
+    line-height: 1.4; word-break: keep-all;
+  }
+
+  /* TRANSFORMATION */
+  .transform-cards {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+
+  .transform-card {
+    background: var(--white);
+    border: 1px solid var(--pink-mid);
+    border-radius: 20px; padding: 28px;
+    display: flex; gap: 20px; align-items: flex-start;
+  }
+
+  .tf-icon {
+    width: 48px; height: 48px;
+    background: var(--pink-light); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+
+  .tf-before {
+    font-size: 13px; color: var(--text-light);
+    margin-bottom: 8px; word-break: keep-all;
+  }
+
+  .tf-before span {
+    display: inline-block;
+    background: var(--pink-light); color: var(--rose);
+    padding: 2px 10px; border-radius: 100px;
+    font-size: 11px; font-weight: 700;
+    margin-right: 6px; letter-spacing: 0.05em;
+  }
+
+  .tf-after {
+    font-size: 15px; font-weight: 700;
+    color: var(--pink-dark); line-height: 1.5;
+    word-break: keep-all;
+  }
+
+  .tf-after span {
+    display: inline-block;
+    background: rgba(139,74,74,0.08); color: var(--pink-dark);
+    padding: 2px 10px; border-radius: 100px;
+    font-size: 11px; font-weight: 700;
+    margin-right: 6px; letter-spacing: 0.05em;
   }
 
   /* WHO */
@@ -175,12 +268,79 @@
   }
 
   .who-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(200,120,120,0.1); }
-
   .who-icon { font-size: 32px; margin-bottom: 12px; display: block; }
   .who-card p { font-size: 14px; color: var(--text-mid); line-height: 1.6; word-break: keep-all; }
 
+  /* HOST */
+  .host-box {
+    background: var(--white);
+    border: 1px solid var(--pink-mid);
+    border-radius: 24px; padding: 40px 36px;
+  }
+
+  .host-profile {
+    display: flex; gap: 24px; align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .host-avatar {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, var(--pink-mid), var(--pink-light));
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 36px; flex-shrink: 0;
+  }
+
+  .host-name {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 22px; font-weight: 700;
+    color: var(--pink-dark); margin-bottom: 4px;
+  }
+
+  .host-handle {
+    font-size: 13px; color: var(--rose); margin-bottom: 8px;
+  }
+
+  .host-tags {
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+
+  .host-tag {
+    background: var(--pink-light);
+    color: var(--text-mid);
+    padding: 4px 12px; border-radius: 100px;
+    font-size: 12px; font-weight: 500;
+  }
+
+  .host-desc {
+    font-size: 15px; color: var(--text-mid);
+    line-height: 1.9; word-break: keep-all;
+  }
+
+  .host-desc strong { color: var(--pink-dark); }
+
+  .host-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px; margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--pink-mid);
+  }
+
+  .host-stat { text-align: center; }
+
+  .host-stat .num {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 24px; font-weight: 700;
+    color: var(--pink-dark); margin-bottom: 4px;
+  }
+
+  .host-stat .lbl { font-size: 12px; color: var(--text-light); }
+
   /* CURRICULUM */
-  .curriculum-bg { background: linear-gradient(160deg, #FDF0F0 0%, #F9E0E0 100%); padding: 80px 24px; }
+  .curriculum-bg {
+    background: linear-gradient(160deg, #FDF0F0 0%, #F9E0E0 100%);
+    padding: 80px 24px;
+  }
 
   .day-cards { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0 auto; }
 
@@ -213,8 +373,6 @@
   .day-emoji-r { font-size: 24px; }
 
   /* VALUE */
-  .value-section { padding: 80px 24px; max-width: 680px; margin: 0 auto; }
-
   .value-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
 
   .value-card {
@@ -240,16 +398,16 @@
   }
 
   .price-cross { font-size: 14px; color: var(--text-light); text-decoration: line-through; margin-bottom: 8px; }
+
   .price-main {
     font-family: 'Noto Serif KR', serif;
     font-size: 60px; font-weight: 700;
     color: var(--pink-dark); line-height: 1; margin-bottom: 10px;
   }
+
   .price-note { font-size: 14px; color: var(--text-light); }
 
   /* CERT */
-  .cert-wrap { padding: 0 24px 80px; max-width: 680px; margin: 0 auto; }
-
   .cert-box {
     background: var(--white); border: 1px solid var(--pink-mid);
     border-radius: 24px; padding: 40px 32px;
@@ -264,10 +422,48 @@
   .cert-text { font-size: 15px; color: var(--text-mid); line-height: 1.9; margin-bottom: 24px; word-break: keep-all; }
 
   .hashtags { display: flex; gap: 8px; flex-wrap: wrap; }
+
   .hashtag {
     background: var(--pink-light); border: 1px solid var(--pink-mid);
     color: var(--rose); padding: 6px 16px; border-radius: 100px;
     font-size: 13px; font-weight: 600;
+  }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--pink-mid);
+    border-radius: 16px; overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 20px 24px;
+    font-size: 15px; font-weight: 700;
+    color: var(--pink-dark); cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
+  }
+
+  .faq-q::after {
+    content: '+'; font-size: 20px; color: var(--rose);
+    transition: transform 0.3s; flex-shrink: 0; margin-left: 12px;
+  }
+
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 14px; color: var(--text-mid);
+    line-height: 1.9; padding: 0 24px;
+    word-break: keep-all;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 0 24px 20px;
   }
 
   /* FINAL */
@@ -343,6 +539,10 @@
     .who-grid { grid-template-columns: 1fr 1fr; }
     .schedule-row { flex-direction: column; align-items: center; }
     .sticky-bar { flex-direction: column; gap: 10px; text-align: center; }
+    .host-profile { flex-direction: column; align-items: center; text-align: center; }
+    .host-tags { justify-content: center; }
+    .fomo-stats { grid-template-columns: 1fr; }
+    .host-stats { grid-template-columns: 1fr; gap: 12px; }
   }
 </style>
 </head>
@@ -373,14 +573,85 @@
     </div>
   </div>
 
-  <a href="https://forms.gle/VMWw3EG8nPvdYVN1A" target="_blank" class="btn-hero">
+  <a href="https://forms.gle/VMWw3EG8nPvdYVN1A" target="_blank" class="btn-main">
     지금 바로 신청하기 →
   </a>
   <p class="seats-note">선착순 <strong>30명</strong> 마감 · 참가비 ₩99,000</p>
 </section>
 
+<!-- FOMO -->
+<div class="fomo-bg fade-up">
+  <div class="fomo-inner">
+    <div class="elegant-divider"><span>지금이 타이밍인 이유</span></div>
+    <div class="fomo-box">
+      <p class="big-text">
+        챗GPT 이미지,<br>
+        지금 이 순간이<br>
+        <em>가장 쉬운 타이밍</em>이에요.
+      </p>
+      <p>
+        요즘 챗GPT 이미지 기능이 완전히 달라졌어요.<br>
+        텍스트 한 줄이면 프로 디자이너 수준의 이미지가 나오는 시대가 됐어요.<br><br>
+        문제는, 6개월 후엔 모두가 이걸 쓰고 있을 거라는 거예요.<br>
+        <strong>지금 시작하는 사람이 먼저 브랜드를 만들고, 먼저 자산을 쌓아요.</strong><br><br>
+        이 챌린지는 그 타이밍을 잡는 7일이에요.
+      </p>
+      <div class="fomo-stats">
+        <div class="fomo-stat">
+          <div class="num">7일</div>
+          <div class="label">챌린지 기간</div>
+        </div>
+        <div class="fomo-stat">
+          <div class="num">70개</div>
+          <div class="label">브랜드 자산</div>
+        </div>
+        <div class="fomo-stat">
+          <div class="num">30명</div>
+          <div class="label">선착순 마감</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRANSFORMATION -->
+<div class="inner fade-up">
+  <div class="elegant-divider"><span>7일 후 달라지는 것들</span></div>
+  <h2 class="section-title">참가 전과 후,<br>이렇게 달라져요</h2>
+  <div class="transform-cards">
+    <div class="transform-card">
+      <div class="tf-icon">🎨</div>
+      <div>
+        <div class="tf-before"><span>BEFORE</span>디자인은 디자이너한테 맡겨야 해</div>
+        <div class="tf-after"><span>AFTER</span>내 브랜드 이미지, 내가 직접 뚝딱 만든다</div>
+      </div>
+    </div>
+    <div class="transform-card">
+      <div class="tf-icon">⏱️</div>
+      <div>
+        <div class="tf-before"><span>BEFORE</span>이미지 하나 만드는 데 몇 시간씩 걸려</div>
+        <div class="tf-after"><span>AFTER</span>10분이면 10개 완성, 시간이 남는다</div>
+      </div>
+    </div>
+    <div class="transform-card">
+      <div class="tf-icon">📱</div>
+      <div>
+        <div class="tf-before"><span>BEFORE</span>SNS에 올릴 이미지가 없어서 못 올려</div>
+        <div class="tf-after"><span>AFTER</span>7일 후 내 인스타 피드가 브랜드 포트폴리오</div>
+      </div>
+    </div>
+    <div class="transform-card">
+      <div class="tf-icon">💪</div>
+      <div>
+        <div class="tf-before"><span>BEFORE</span>AI는 어렵고 나랑은 거리가 먼 얘기야</div>
+        <div class="tf-after"><span>AFTER</span>나도 AI로 전문가처럼 만든다는 자신감</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- WHO -->
-<div class="section fade-up">
+<div class="inner fade-up" style="padding-top: 0;">
   <div class="elegant-divider"><span>이런 분들에게 추천해요</span></div>
   <div class="who-grid">
     <div class="who-card">
@@ -402,12 +673,51 @@
   </div>
 </div>
 
+<!-- HOST -->
+<div class="inner fade-up" style="padding-top: 0;">
+  <div class="elegant-divider"><span>강사 소개</span></div>
+  <div class="host-box">
+    <div class="host-profile">
+      <div class="host-avatar">🌸</div>
+      <div>
+        <div class="host-name">마니아 (아인프로)</div>
+        <div class="host-handle">@promania_ai · AI콘텐츠랩스</div>
+        <div class="host-tags">
+          <span class="host-tag">AI콘텐츠 전략가</span>
+          <span class="host-tag">수익화 설계자</span>
+          <span class="host-tag">울산 기반</span>
+        </div>
+      </div>
+    </div>
+    <p class="host-desc">
+      4년 전, AI를 처음 만났을 때부터 지금까지<br>
+      <strong>생성형 AI로 콘텐츠를 만들고 수익을 내는 법</strong>만 연구해왔어요.<br><br>
+      "보통 퀄리티면 충분합니다. 자연스러운 게 최고의 퀄리티예요."<br><br>
+      어렵게 배우지 않아도 돼요. 따라오시면 됩니다.
+    </p>
+    <div class="host-stats">
+      <div class="host-stat">
+        <div class="num">500+</div>
+        <div class="lbl">수강생</div>
+      </div>
+      <div class="host-stat">
+        <div class="num">60K+</div>
+        <div class="lbl">SNS 팔로워</div>
+      </div>
+      <div class="host-stat">
+        <div class="num">9+</div>
+        <div class="lbl">운영 코호트</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CURRICULUM -->
 <div class="curriculum-bg fade-up">
   <div style="max-width: 640px; margin: 0 auto;">
     <div class="elegant-divider"><span>7일 커리큘럼</span></div>
     <h2 class="section-title" style="margin-bottom: 32px;">
-      매일 하나씩,<br>7일 후 브랜드 자산 70개
+      매일 하나씩,<br>하루에 10개씩 완성
     </h2>
     <div class="day-cards">
       <div class="day-card">
@@ -471,7 +781,7 @@
 </div>
 
 <!-- VALUE -->
-<div class="value-section fade-up">
+<div class="inner fade-up">
   <div class="elegant-divider"><span>완주하면 드리는 것</span></div>
   <h2 class="section-title">7일 후<br>손에 남는 것들</h2>
   <div class="value-cards">
@@ -480,7 +790,7 @@
       <div>
         <div class="v-label">강사 제작 레퍼런스</div>
         <div class="v-title">브랜드 이미지 70개 PDF</div>
-        <div class="v-desc">마니아 님이 직접 만든 예시 이미지 모음집<br>바로 참고해서 쓸 수 있어요</div>
+        <div class="v-desc">마니아 님이 직접 만든 예시 이미지 모음집. 바로 참고해서 쓸 수 있어요.</div>
       </div>
     </div>
     <div class="value-card">
@@ -488,7 +798,7 @@
       <div>
         <div class="v-label">완주 선물</div>
         <div class="v-title">원클릭시스템 (₩79,000 상당)</div>
-        <div class="v-desc">완주자에게만 드리는 특별 선물</div>
+        <div class="v-desc">완주자에게만 드리는 특별 선물이에요.</div>
       </div>
     </div>
     <div class="value-card">
@@ -496,7 +806,7 @@
       <div>
         <div class="v-label">인스타 인증</div>
         <div class="v-title">내 피드가 브랜드 포트폴리오</div>
-        <div class="v-desc">매일 인증하면 7일 후 SNS에 내 브랜드 자산이 쌓여있어요</div>
+        <div class="v-desc">매일 인증하면 7일 후 SNS에 내 브랜드 자산 70개가 쌓여있어요.</div>
       </div>
     </div>
   </div>
@@ -508,7 +818,7 @@
 </div>
 
 <!-- CERT -->
-<div class="cert-wrap fade-up">
+<div class="inner fade-up" style="padding-top: 0;">
   <div class="cert-box">
     <div class="cert-tag">매일 인증</div>
     <p class="cert-text">
@@ -524,18 +834,50 @@
   </div>
 </div>
 
+<!-- FAQ -->
+<div class="inner fade-up" style="padding-top: 0;">
+  <div class="elegant-divider"><span>자주 묻는 질문</span></div>
+  <h2 class="section-title">궁금한 점이<br>있으신가요?</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">AI를 전혀 써본 적 없어도 괜찮을까요?</div>
+      <div class="faq-a">네, 전혀 문제없어요. 챗GPT 계정만 있으면 돼요. 매일 미션을 따라오시면 처음이어도 충분히 완주할 수 있어요. 어려운 개념 없이 실무 중심으로 진행해요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">하루에 얼마나 시간이 필요해요?</div>
+      <div class="faq-a">하루 30분~1시간이면 충분해요. 매일 미션 하나씩, 이미지 10개 만드는 방식이라 부담 없이 따라오실 수 있어요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">완주 기준이 어떻게 돼요?</div>
+      <div class="faq-a">7일 중 5일 이상 인스타 인증을 완료하시면 완주로 인정돼요. 완주하신 분들께 원클릭시스템과 이미지 70개 PDF를 드려요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">챗GPT 유료 플랜이 있어야 하나요?</div>
+      <div class="faq-a">이미지 생성 기능은 챗GPT Plus(유료) 플랜에서 이용 가능해요. 월 약 28,000원 수준이에요. 챌린지 기간 동안 가입해서 사용하시길 권장해요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">단톡방은 언제 입장할 수 있나요?</div>
+      <div class="faq-a">신청 및 입금 확인 후 개별 안내 드려요. 4월 26일 오리엔테이션 라이브 전까지 초대드릴게요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">환불은 가능한가요?</div>
+      <div class="faq-a">챌린지 특성상 4월 26일 오리엔테이션 라이브 시작 전까지만 환불 가능해요. 이후에는 환불이 어렵습니다.</div>
+    </div>
+  </div>
+</div>
+
 <!-- FINAL CTA -->
 <div class="final-cta fade-up" id="join">
   <h2 class="final-title">지금 바로 시작하세요</h2>
   <p class="final-sub">
     ChatGPT와 함께라면<br>
     누구나 창작자가 될 수 있습니다.<br><br>
-    <strong>4월 26일 저녁 8시</strong>, 당신의 첫 이미지를 기다릴게요.
+    <strong>4월 26일 저녁 8시</strong>,<br>당신의 첫 이미지를 기다릴게요.
   </p>
   <a href="https://forms.gle/VMWw3EG8nPvdYVN1A" target="_blank" class="btn-final">
     챌린지 신청하기 →
   </a>
-  <p class="final-note">참가비 ₩99,000 · 신청 후 계좌 안내드려요</p>
+  <p class="final-note">참가비 ₩99,000 · 선착순 30명 · 신청 후 계좌 안내드려요</p>
 </div>
 
 <footer>
@@ -549,14 +891,26 @@
 </div>
 
 <script>
+  // Fade on scroll
   const fadeEls = document.querySelectorAll('.fade-up');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   fadeEls.forEach(el => observer.observe(el));
 
+  // Sticky bar
   window.addEventListener('scroll', () => {
     document.getElementById('stickyBar').classList.toggle('show', window.scrollY > 500);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
   });
 </script>
 </body>
